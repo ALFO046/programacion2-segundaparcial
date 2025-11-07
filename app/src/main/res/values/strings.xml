@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Parcial2_ProgramacionII</string>
+    <string name="fotos_de_la_casa_label">Fotos de la Casa</string>
+    <string name="ci_del_cliente_hint">CI del Cliente</string>
+    <string name="nombre_completo_hint">Nombre Completo</string>
+    <string name="direccion_hint">Dirección</string>
+    <string name="telefono_hint">Teléfono</string>
+    <string name="capturar_foto_1_button">Capturar Foto 1</string>
+    <string name="capturar_foto_2_button">Capturar Foto 2</string>
+    <string name="capturar_foto_3_button">Capturar Foto 3</string>
+    <string name="enviar_datos_button">Enviar Datos</string>
+    <string name="foto_de_la_casa_1_description">Foto de la casa 1</string>
+    <string name="foto_de_la_casa_2_description">Foto de la casa 2</string>
+    <string name="foto_de_la_casa_3_description">Foto de la casa 3</string>
+</resources>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioClienteActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_ci"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_ci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ci_del_cliente_hint"
+                android:minHeight="48dp"
+                android:textColorHint="?android:attr/textColorHint"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nombre_completo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_ci">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nombre_completo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nombre_completo_hint"
+                android:minHeight="48dp"
+                android:textColorHint="?android:attr/textColorHint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_direccion"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_nombre_completo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/direccion_hint"
+                android:minHeight="48dp"
+                android:textColorHint="?android:attr/textColorHint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_telefono"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_direccion">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/telefono_hint"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:textColorHint="?android:attr/textColorHint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_fotos_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/fotos_de_la_casa_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_telefono" />
+
+        <!-- Foto Casa 1 -->
+        <LinearLayout
+            android:id="@+id/ll_foto_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tv_fotos_label">
+
+            <ImageView
+                android:id="@+id/iv_foto_casa_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="?attr/colorOnSurface"
+                android:contentDescription="@string/foto_de_la_casa_1_description"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:id="@+id/btn_capturar_foto_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/capturar_foto_1_button" />
+        </LinearLayout>
+
+        <!-- Foto Casa 2 -->
+        <LinearLayout
+            android:id="@+id/ll_foto_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/ll_foto_1">
+
+            <ImageView
+                android:id="@+id/iv_foto_casa_2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="?attr/colorOnSurface"
+                android:contentDescription="@string/foto_de_la_casa_2_description"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:id="@+id/btn_capturar_foto_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/capturar_foto_2_button" />
+        </LinearLayout>
+
+        <!-- Foto Casa 3 -->
+        <LinearLayout
+            android:id="@+id/ll_foto_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/ll_foto_2">
+
+            <ImageView
+                android:id="@+id/iv_foto_casa_3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="?attr/colorOnSurface"
+                android:contentDescription="@string/foto_de_la_casa_3_description"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:id="@+id/btn_capturar_foto_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/capturar_foto_3_button" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_enviar_formulario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/enviar_datos_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_foto_3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
